@@ -1,0 +1,17 @@
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore Symfony cache and logs
+/var/
+
+# Ignore environment local settings
+.env.local
+.env.*.local
+
+# Ignore build artifacts
+/node_modules/
+/public/build/
+
+# Ignore Docker artifacts (if desired)
+*.log
+docker-compose.override.yml

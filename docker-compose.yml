@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+
+  # ==================== MS-ARTICLE ====================
+  ms-article:
+    build:
+      context: ./ms-article
+      # This directory should contain:
+      #   - Dockerfile
+      #   - symfony/ (the Symfony skeleton/app)
+      #   - nginx.conf
+      #   - supervisord.conf
+    container_name: ms-article
+    ports:
+      - "8001:80"
+    # environment:
+    #   APP_ENV: prod
+    #   # Add any other env vars you need
+
+  # ==================== MS-AUTHOR ====================
+  ms-author:
+    build:
+      context: ./ms-author
+    container_name: ms-author
+    ports:
+      - "8002:80"
+    # environment:
+    #   APP_ENV: prod
+
+  # ==================== MS-USER ====================
+  ms-user:
+    build:
+      context: ./ms-user
+    container_name: ms-user
+    ports:
+      - "8003:80"
+    # environment:
+    #   APP_ENV: prod
